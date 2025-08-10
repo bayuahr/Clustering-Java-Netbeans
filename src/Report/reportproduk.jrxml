@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="659ac7dd-2590-4f27-98a0-5c2e231350fc">
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <parameter name="IMAGE_PATH" class="java.lang.String">
+        <defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+    </parameter>
+    <queryString language="SQL">
+    <![CDATA[
+        SELECT id_produk, k.id_kategori, k.nama_kategori, p.nama_produk, p.harga, p.stok
+        FROM produk p 
+        INNER JOIN kategori_produk k ON p.id_kategori = k.id_kategori
+        ORDER BY id_produk ASC
+    ]]>    </queryString>
+    <field name="id_produk" class="java.lang.Integer"/>
+    <field name="nama_kategori" class="java.lang.String"/>
+    <field name="nama_produk" class="java.lang.String"/>
+    <field name="harga" class="java.lang.Integer"/>
+    <field name="stok" class="java.lang.Integer"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="144" splitType="Stretch">
+            <image>
+                <reportElement uuid="a62ce5d1-937f-4c71-afaf-2c39c14ffe2c" x="1" y="0" width="200" height="144"/>
+                <imageExpression><![CDATA[$P{IMAGE_PATH}]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement uuid="f530a9c4-4d59-43fc-9faf-121ba123ecc2" x="285" y="27" width="266" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[KOPI KENANGAN]]></text>
+            </staticText>
+            <!--            <staticText>
+                <reportElement uuid="e683ddc6-75e5-4097-8cac-4d58edc74c2d" x="355" y="107" width="128" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[    Jakarta Timur 13470]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="50330e19-0b7f-403e-9b89-765697c766b5" x="304" y="47" width="228" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Jl. I Gusti Ngurah Rai No.77 RT.1/RW.16]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="d792e2fe-5ecb-4ae4-9cb5-971f0e4a9361" x="366" y="87" width="117" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Telp (021) 8611832]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="a2eec29f-3b4e-42bb-9b94-5ff4b6c4a03b" x="322" y="7" width="200" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[PALANG MERAH INDONESIA]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="50330e19-0b7f-403e-9b89-765697c766b5" x="340" y="67" width="175" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Kel. Klender, Kec. Duren Sawit ]]></text>
+            </staticText>
+            <image>
+                <reportElement uuid="b7ed3bd7-90af-464f-bcb0-0c3a547f68fb" x="37" y="18" width="170" height="100"/>
+                <imageExpression><![CDATA["C:\\Users\\dimas setyanto\\Documents\\App Posko PMI V 2.3\\src\\Image\\pmitext.png.png"]]></imageExpression>
+            </image>-->
+        </band>
+    </title>
+    <pageHeader>
+        <band height="25" splitType="Stretch">
+            <staticText>
+                <reportElement uuid="f530a9c4-4d59-43fc-9faf-121ba123ecc2" x="294" y="0" width="266" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[LAPORAN DATA PRODUK]]></text>
+            </staticText>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="44" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="24" width="80" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[ID PRODUK]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="80" y="24" width="150" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[NAMA KATEGORI]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="230" y="24" width="150" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[NAMA PRODUK]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="380" y="24" width="80" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[HARGA]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="460" y="24" width="80" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font isBold="true"/>
+                </textElement>
+                <text><![CDATA[STOK]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="80" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{id_produk}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="80" y="0" width="150" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[$F{nama_kategori}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="230" y="0" width="150" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[$F{nama_produk}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="0" width="80" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="460" y="0" width="80" height="20"/>
+                <box>
+                    <pen lineWidth="1.0"/>
+                </box>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <columnFooter>
+        <band height="119" splitType="Stretch">
+            <staticText>
+                <reportElement uuid="f98b9c1c-23f1-4450-90e2-c9b0bf053d55" x="621" y="2" width="37" height="20"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[Jakarta,]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="304e03d6-a9a9-45b6-a543-d69600d13f2e" x="636" y="22" width="115" height="20"/>
+                <textElement>
+                    <font size="11"/>
+                </textElement>
+                <text><![CDATA[Manager]]></text>
+            </staticText>
+            <staticText>
+                <reportElement uuid="4e5e6f1c-0df9-41f1-a7d6-de5a2cd1f4e7" x="639" y="99" width="112" height="20"/>
+                <textElement>
+                    <font size="11"/>
+                </textElement>
+                <text><![CDATA[(Andika Derwasa)]]></text>
+            </staticText>
+            <textField pattern="EEEE dd MMMM yyyy" isBlankWhenNull="false">
+                <reportElement uuid="138f6a17-224b-470e-92e2-4582afe9e061" x="660" y="2" width="134" height="20"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
