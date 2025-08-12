@@ -87,53 +87,53 @@
         </band>
     </pageHeader>
     <columnHeader>
-        <band height="44" splitType="Stretch">
+        <band height="25" splitType="Stretch">
             <staticText>
-                <reportElement x="0" y="24" width="80" height="20"/>
+                <reportElement x="131" y="0" width="80" height="25"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center">
+                <textElement textAlignment="Center" verticalAlignment="Middle">
                     <font isBold="true"/>
                 </textElement>
                 <text><![CDATA[ID PRODUK]]></text>
             </staticText>
             <staticText>
-                <reportElement x="80" y="24" width="150" height="20"/>
+                <reportElement x="211" y="0" width="150" height="25"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center">
+                <textElement textAlignment="Center" verticalAlignment="Middle">
                     <font isBold="true"/>
                 </textElement>
                 <text><![CDATA[NAMA KATEGORI]]></text>
             </staticText>
             <staticText>
-                <reportElement x="230" y="24" width="150" height="20"/>
+                <reportElement x="361" y="0" width="150" height="25"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center">
+                <textElement textAlignment="Center" verticalAlignment="Middle">
                     <font isBold="true"/>
                 </textElement>
                 <text><![CDATA[NAMA PRODUK]]></text>
             </staticText>
             <staticText>
-                <reportElement x="380" y="24" width="80" height="20"/>
+                <reportElement x="511" y="0" width="80" height="25"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center">
+                <textElement textAlignment="Center" verticalAlignment="Middle">
                     <font isBold="true"/>
                 </textElement>
                 <text><![CDATA[HARGA]]></text>
             </staticText>
             <staticText>
-                <reportElement x="460" y="24" width="80" height="20"/>
+                <reportElement x="591" y="0" width="80" height="25"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center">
+                <textElement textAlignment="Center" verticalAlignment="Middle">
                     <font isBold="true"/>
                 </textElement>
                 <text><![CDATA[STOK]]></text>
@@ -144,47 +144,48 @@
     <detail>
         <band height="20" splitType="Stretch">
             <textField>
-                <reportElement x="0" y="0" width="80" height="20"/>
+                <reportElement x="131" y="0" width="80" height="20"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
                 <textFieldExpression><![CDATA[$F{id_produk}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="80" y="0" width="150" height="20"/>
+                <reportElement x="211" y="0" width="150" height="20"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Left"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
                 <textFieldExpression><![CDATA[$F{nama_kategori}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="230" y="0" width="150" height="20"/>
+                <reportElement x="361" y="0" width="150" height="20"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Left"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
                 <textFieldExpression><![CDATA[$F{nama_produk}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="380" y="0" width="80" height="20"/>
+                <reportElement x="511" y="0" width="80" height="20"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Right"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle"/>
                 <textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="460" y="0" width="80" height="20"/>
+                <reportElement x="591" y="0" width="80" height="20"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
                 <textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
             </textField>
         </band>
     </detail>
+
 
     <columnFooter>
         <band height="119" splitType="Stretch">

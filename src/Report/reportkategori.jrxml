@@ -84,27 +84,29 @@
     <columnHeader>
         <band height="20" splitType="Stretch">
             <staticText>
-                <reportElement uuid="7940576a-56c3-4e2a-aa15-72f006e6ef0c" x="51" y="0" width="100" height="20"/>
+                <reportElement uuid="7940576a-56c3-4e2a-aa15-72f006e6ef0c" x="360" y="0" width="100" height="20"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
                 <text><![CDATA[Nama Kategori]]></text>
             </staticText>
         </band>
     </columnHeader>
+
     <detail>
         <band height="21" splitType="Stretch">
             <textField>
-                <reportElement uuid="b46c9ee4-a10a-4618-860b-46f09b9f12e1" x="51" y="1" width="100" height="20"/>
+                <reportElement uuid="b46c9ee4-a10a-4618-860b-46f09b9f12e1" x="360" y="1" width="100" height="20"/>
                 <box>
                     <pen lineWidth="1.0"/>
                 </box>
-                <textElement textAlignment="Center"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
                 <textFieldExpression><![CDATA[$F{nama_kategori}]]></textFieldExpression>
             </textField>
         </band>
     </detail>
+
 
     <columnFooter>
         <band height="119" splitType="Stretch">
